@@ -51,7 +51,7 @@
 
 - (void)saveButtonClick{
     NSLog(@"GGSSubMenuViewController saveButtonClick");
-    [self showHUDWithText:@"别点了，该功能还没写" delay:1.0];
+    [self showHUDWithText:@"该功能还在施工中，敬请期待" delay:1.0];
 }
 
 - (void)dealloc

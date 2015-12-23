@@ -24,7 +24,7 @@
 @implementation GGSMovieViewController
 
 #pragma mark - 全局变量
-static NSString *const VIEW_TITLE = @"电影票房";
+static NSString *const VIEW_TITLE = @"今日票房";
 static NSString *const GGS_MOVIE_URL = @"http://apis.haoservice.com/lifeservice/boxoffice/wp";
 static NSString *const GGS_MOVIE_KEY = @"0fd4eab64a9446f08f77868763b71cdc";
 static NSString *const GGS_MOVIE_CELL = @"GGS_MOVIE_CELL";

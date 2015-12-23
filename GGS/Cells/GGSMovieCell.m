@@ -28,7 +28,7 @@
     self.rankLabel.layer.masksToBounds = YES;
     self.nameLabel.text = [NSString stringWithFormat:@"%@",movie.name];
     NSString *boxoffice;
-    //票房上亿，红色，单位亿，灰色单位百万， 绿色 万
+    //票房上亿，红色，单位亿，灰色单位百万， 绿色 万 （接口返回数据不知道单位是多少）
     if (movie.boxoffice/1000000 > 1) {
         boxoffice = [NSString stringWithFormat:@"%0.2f 亿",movie.boxoffice/1000000];
         self.backgroundColor = [UIColor redColor];
