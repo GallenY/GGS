@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "GGSMenuViewController.h"
+#import "GGSMovieViewController.h"
+#import "GGSAirViewController.h"
+#import "GGSPersonViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    //菜谱大全
+    UIStoryboard *menuStoryboard = [UIStoryboard storyboardWithName:@"GGSMenuViewController" bundle:nil];
+    GGSMovieViewController *menuViewController = [menuStoryboard instantiateInitialViewController];
+    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+    menuViewController.navigationItem.title = @"菜谱大全";
+    menuNavigationController.tabBarItem.title = @"菜谱大全";
+    menuNavigationController.tabBarItem.image = [UIImage imageNamed:@"tabbar_item_home"];
+    //电影票房
+    GGSMovieViewController *movieViewController = [[GGSMovieViewController alloc] init];
+    UINavigationController *movieNavigationController = [[UINavigationController alloc] initWithRootViewController:movieViewController];
+    //空气质量
+    UIStoryboard *airStoryboard = [UIStoryboard storyboardWithName:@"GGSAirViewController" bundle:nil];
+    GGSAirViewController *airViewController = [airStoryboard instantiateInitialViewController];
+    UINavigationController *airNavigationController = [[UINavigationController alloc] initWithRootViewController:airViewController];
+    airViewController.navigationItem.title = @"空气质量";
+    airNavigationController.tabBarItem.title = @"空气质量";
+    airNavigationController.tabBarItem.image = [UIImage imageNamed:@"tabbar_item_air"];
+    //个人
+    UIStoryboard *personStoryboard = [UIStoryboard storyboardWithName:@"GGSPersonViewController" bundle:nil];
+    GGSPersonViewController *personViewController = [personStoryboard instantiateInitialViewController];
+    UINavigationController *personNavigationController = [[UINavigationController alloc] initWithRootViewController:personViewController];
+    personViewController.navigationItem.title = @"个人";
+    personNavigationController.tabBarItem.title = @"个人";
+    personNavigationController.tabBarItem.image = [UIImage imageNamed:@"tabbar_item_person"];
+    
+    tabBarController.viewControllers = @[menuNavigationController,movieNavigationController,airNavigationController,personNavigationController];
+    
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

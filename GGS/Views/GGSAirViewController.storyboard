@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hzk-I6-CWz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Air View Controller-->
+        <scene sceneID="Jqj-jJ-xCa">
+            <objects>
+                <viewController id="hzk-I6-CWz" customClass="GGSAirViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dLL-3Q-RHg"/>
+                        <viewControllerLayoutGuide type="bottom" id="9IS-g9-cF9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w7y-TK-mqz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ6-jn-KdA" userLabel="city">
+                                <rect key="frame" x="153" y="53" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-u5-WpX" userLabel="aqi">
+                                <rect key="frame" x="173" y="146" width="27.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空气质量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUu-wO-lIQ" userLabel="quality">
+                                <rect key="frame" x="153" y="240" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM2.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azD-eo-9eF" userLabel="pm25">
+                                <rect key="frame" x="163" y="333" width="49" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgN-7h-CIy" userLabel="updatetime">
+                                <rect key="frame" x="153" y="427" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDn-kr-4V5">
+                                <rect key="frame" x="152" y="520" width="70" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="10" maxX="5" maxY="10"/>
+                                <state key="normal" title="重新定位">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reLocate:" destination="hzk-I6-CWz" eventType="touchUpInside" id="kgb-c8-vrU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u4f-u5-WpX" firstAttribute="centerX" secondItem="w7y-TK-mqz" secondAttribute="centerX" id="1os-B9-mGi"/>
+                            <constraint firstItem="dDn-kr-4V5" firstAttribute="top" secondItem="w7y-TK-mqz" secondAttribute="bottom" multiplier="0.78" id="2av-kg-8Q1"/>
+                            <constraint firstItem="azD-eo-9eF" firstAttribute="centerX" secondItem="w7y-TK-mqz" secondAttribute="centerX" id="HnP-ip-stq"/>
+                            <constraint firstItem="u4f-u5-WpX" firstAttribute="top" secondItem="w7y-TK-mqz" secondAttribute="bottom" multiplier="0.22" id="NZF-Im-tWC"/>
+                            <constraint firstItem="dDn-kr-4V5" firstAttribute="centerX" secondItem="w7y-TK-mqz" secondAttribute="centerX" id="NxN-cB-n0c"/>
+                            <constraint firstItem="MUu-wO-lIQ" firstAttribute="centerX" secondItem="w7y-TK-mqz" secondAttribute="centerX" id="RI1-Wo-HSW"/>
+                            <constraint firstItem="zgN-7h-CIy" firstAttribute="top" secondItem="w7y-TK-mqz" secondAttribute="bottom" multiplier="0.64" id="b5Y-eW-agR"/>
+                            <constraint firstItem="azD-eo-9eF" firstAttribute="top" secondItem="w7y-TK-mqz" secondAttribute="bottom" multiplier="0.5" id="fBN-07-CeR"/>
+                            <constraint firstItem="zgN-7h-CIy" firstAttribute="centerX" secondItem="w7y-TK-mqz" secondAttribute="centerX" id="fa2-X2-B3w"/>
+                            <constraint firstItem="HQ6-jn-KdA" firstAttribute="top" secondItem="w7y-TK-mqz" secondAttribute="bottom" multiplier="0.08" id="vsW-ae-6jB"/>
+                            <constraint firstItem="MUu-wO-lIQ" firstAttribute="top" secondItem="w7y-TK-mqz" secondAttribute="bottom" multiplier="0.36" id="zkb-kW-XAB"/>
+                            <constraint firstItem="HQ6-jn-KdA" firstAttribute="centerX" secondItem="w7y-TK-mqz" secondAttribute="centerX" id="zmG-6i-BeY"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="aqiLabel" destination="u4f-u5-WpX" id="F5J-hm-g4L"/>
+                        <outlet property="cityLabel" destination="HQ6-jn-KdA" id="xqv-ZZ-BhI"/>
+                        <outlet property="pmLabel" destination="azD-eo-9eF" id="7as-I2-CnZ"/>
+                        <outlet property="qualityLabel" destination="MUu-wO-lIQ" id="FSf-1R-XYe"/>
+                        <outlet property="timeLabel" destination="zgN-7h-CIy" id="sc0-xU-tWv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWN-cR-v5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="176"/>
+        </scene>
+    </scenes>
+</document>

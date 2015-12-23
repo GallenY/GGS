@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fmS-Js-IJ6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="10n-hq-kq2">
+            <objects>
+                <viewController id="fmS-Js-IJ6" customClass="GGSMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n6Q-13-SGc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugS-Ph-T1O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JDA-nb-zcn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZA4-bE-I1f">
+                                <rect key="frame" x="0.0" y="66" width="375" height="600.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fmS-Js-IJ6" id="oSH-60-unc"/>
+                                    <outlet property="delegate" destination="fmS-Js-IJ6" id="7mG-L7-50W"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iis-DV-K17" userLabel="SearchView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2qB-uk-xYI">
+                                        <rect key="frame" x="10" y="5" width="300" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mp-em-v9f">
+                                        <rect key="frame" x="307" y="19" width="67.5" height="30"/>
+                                        <state key="normal" title="搜索">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchButtonClick:" destination="fmS-Js-IJ6" eventType="touchUpInside" id="8y6-a6-1yH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2qB-uk-xYI" firstAttribute="top" secondItem="iis-DV-K17" secondAttribute="top" constant="5" id="CNA-PB-eEh"/>
+                                    <constraint firstItem="2qB-uk-xYI" firstAttribute="width" secondItem="iis-DV-K17" secondAttribute="width" multiplier="0.8" id="DuC-1F-KAA"/>
+                                    <constraint firstItem="4mp-em-v9f" firstAttribute="width" secondItem="iis-DV-K17" secondAttribute="width" multiplier="0.18" id="Shm-ds-amO"/>
+                                    <constraint firstAttribute="trailing" secondItem="4mp-em-v9f" secondAttribute="trailing" id="dfa-Wj-1Sk"/>
+                                    <constraint firstItem="4mp-em-v9f" firstAttribute="centerY" secondItem="iis-DV-K17" secondAttribute="centerY" id="hx6-nS-nzZ"/>
+                                    <constraint firstItem="2qB-uk-xYI" firstAttribute="centerY" secondItem="iis-DV-K17" secondAttribute="centerY" id="tDe-dJ-U3S"/>
+                                    <constraint firstItem="2qB-uk-xYI" firstAttribute="leading" secondItem="iis-DV-K17" secondAttribute="leading" constant="10" id="xlM-ya-kPZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZA4-bE-I1f" firstAttribute="leading" secondItem="JDA-nb-zcn" secondAttribute="leading" id="2OO-KY-dj8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iis-DV-K17" secondAttribute="trailingMargin" id="8Tl-Ba-R3f"/>
+                            <constraint firstAttribute="bottom" secondItem="ZA4-bE-I1f" secondAttribute="bottom" id="9rp-y6-W87"/>
+                            <constraint firstAttribute="trailing" secondItem="iis-DV-K17" secondAttribute="trailing" id="Kdo-5A-n3d"/>
+                            <constraint firstItem="iis-DV-K17" firstAttribute="top" secondItem="JDA-nb-zcn" secondAttribute="topMargin" id="NiN-RZ-dGD"/>
+                            <constraint firstItem="iis-DV-K17" firstAttribute="height" secondItem="JDA-nb-zcn" secondAttribute="height" multiplier="0.1" id="WMe-83-NgD"/>
+                            <constraint firstItem="iis-DV-K17" firstAttribute="leading" secondItem="JDA-nb-zcn" secondAttribute="leading" id="Xuh-Xu-5yj"/>
+                            <constraint firstItem="iis-DV-K17" firstAttribute="top" secondItem="JDA-nb-zcn" secondAttribute="top" id="cZZ-LS-Ob7"/>
+                            <constraint firstAttribute="trailing" secondItem="ZA4-bE-I1f" secondAttribute="trailing" id="hW7-Yz-047"/>
+                            <constraint firstItem="ZA4-bE-I1f" firstAttribute="top" secondItem="iis-DV-K17" secondAttribute="bottom" id="l9Y-EP-eMr"/>
+                            <constraint firstItem="iis-DV-K17" firstAttribute="leading" secondItem="JDA-nb-zcn" secondAttribute="leadingMargin" id="v8T-ka-Yi2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Tl-Ba-R3f"/>
+                                <exclude reference="NiN-RZ-dGD"/>
+                                <exclude reference="v8T-ka-Yi2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="searchButton" destination="4mp-em-v9f" id="Hay-SS-xyC"/>
+                        <outlet property="searchLabel" destination="2qB-uk-xYI" id="fFq-58-MKC"/>
+                        <outlet property="tableView" destination="ZA4-bE-I1f" id="gcB-Cn-ILt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ouj-vk-6bz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="-5"/>
+        </scene>
+    </scenes>
+</document>
