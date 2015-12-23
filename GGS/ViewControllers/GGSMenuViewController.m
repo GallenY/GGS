@@ -121,6 +121,8 @@ static NSString *const GGS_MENU_KEY = @"32e0465853134a5281d50ada48f37d76";
                 [self.tableView reloadData];
                 NSIndexPath *idx = [NSIndexPath indexPathForRow:1 inSection:0];
                 [self.tableView scrollToRowAtIndexPath:idx atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+                //结束键盘编辑
+                [self.view  endEditing:YES];
             }
         }else{
             [self showHUDWithText:responseObject[@"reason"] delay:2.0];
