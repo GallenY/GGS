@@ -41,7 +41,7 @@
     return _cityDict;
 }
 
-#pragma mark - 全局变量
+#pragma mark - Constants
 static NSString *const GGS_AIR_URL = @"http://apis.haoservice.com/air/cityair";
 static NSString *const GGS_AIR_KEY = @"f1a921fee5e54db9811082579a863c7d";
 

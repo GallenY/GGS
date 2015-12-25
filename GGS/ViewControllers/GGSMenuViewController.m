@@ -30,7 +30,7 @@
     NSString *foodName;
 }
 
-#pragma mark - 全局变量
+#pragma mark - Constants
 //static NSString *const VIEW_TITLE = @"菜谱大全";
 static NSString *const GGS_MENU_CELL = @"GGS_MENU_CELL";
 static NSString *const GGS_MENU_URL = @"http://apis.haoservice.com/lifeservice/cook/query?";

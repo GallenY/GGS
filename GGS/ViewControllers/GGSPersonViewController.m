@@ -28,7 +28,7 @@
     return _groupItems;
 }
 
-#pragma mark - 全局变量
+#pragma mark - Constants
 static NSString *const VIEW_TITLE = @"个人";
 static NSString *const GGS_PERSON_CELL_ONE = @"GGS_PERSON_CELL_ONE";
 static NSString *const GGS_PERSON_CELL_TWO = @"GGS_PERSON_CELL_TWO";
