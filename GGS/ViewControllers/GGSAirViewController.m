@@ -43,7 +43,7 @@
 
 #pragma mark - Constants
 static NSString *const GGS_AIR_URL = @"http://apis.haoservice.com/air/cityair";
-static NSString *const GGS_AIR_KEY = @"f1a921fee5e54db9811082579a863c7d";
+static NSString *const GGS_AIR_KEY = @"1a3cdf8562cf4be0aa38dcf2c1c7ad1d";
 
 #pragma mark - VC lifecycle
 - (void)viewDidLoad {

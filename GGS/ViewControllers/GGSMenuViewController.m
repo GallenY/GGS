@@ -34,7 +34,7 @@
 //static NSString *const VIEW_TITLE = @"菜谱大全";
 static NSString *const GGS_MENU_CELL = @"GGS_MENU_CELL";
 static NSString *const GGS_MENU_URL = @"http://apis.haoservice.com/lifeservice/cook/query?";
-static NSString *const GGS_MENU_KEY = @"32e0465853134a5281d50ada48f37d76";
+static NSString *const GGS_MENU_KEY = @"daf966c507b04ee7a473fee55f2709b9";
 
 #pragma mark - VC life cycle
 - (void)viewDidLoad {

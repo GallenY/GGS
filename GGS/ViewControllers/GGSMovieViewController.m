@@ -26,7 +26,7 @@
 #pragma mark - Constants
 static NSString *const VIEW_TITLE = @"今日票房";
 static NSString *const GGS_MOVIE_URL = @"http://apis.haoservice.com/lifeservice/boxoffice/wp";
-static NSString *const GGS_MOVIE_KEY = @"0fd4eab64a9446f08f77868763b71cdc";
+static NSString *const GGS_MOVIE_KEY = @"4f9fe1e1997c4f26803a8291c68cf76b";
 static NSString *const GGS_MOVIE_CELL = @"GGS_MOVIE_CELL";
 
 #pragma mark - VC life cycle
